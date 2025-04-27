@@ -1,9 +1,8 @@
 import { inscriptionSchema } from "./inscription-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
-
-type IFormData = z.infer<typeof inscriptionSchema>;
+import { IFormData } from "@/types";
+import { sendInscription } from "@/services/inscription.service";
 
 /***
  * Formulario de inscripción
@@ -27,8 +26,14 @@ const InscriptionForm = () => {
 
   const watchPerson = watch("person");
 
-  const onSubmit = (data: IFormData) => {
-    console.log(data);
+  const onSubmit = async (data: IFormData) => {
+    const response = await sendInscription(data);
+    console.log("Respuesta del servidor:", response);
+    if (response) {
+      alert("Inscripción exitosa");
+    } else {
+      alert("Error al inscribirse, por favor intenta de nuevo más tarde.");
+    }
   };
 
   return (
