@@ -3,5 +3,5 @@ type envConfig = {
 }
 
 export  const env: envConfig = {
-    apiBaseUrl: process.env.NEXT_PUBLIC_API_URL,
+    apiBaseUrl: process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001",
 }
