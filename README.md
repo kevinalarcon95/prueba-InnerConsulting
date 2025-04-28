@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prueba Técnica - Frontend
 
-## Getting Started
+## Tecnologías Utilizadas
 
-First, run the development server:
+Este proyecto fue desarrollado utilizando las siguientes tecnologías principales:
+
+- **[Next.js](https://nextjs.org/):** Framework de React para el desarrollo web con renderizado del lado del servidor y generación de sitios estáticos.
+- **[React](https://react.dev/):** Biblioteca de JavaScript para construir interfaces de usuario interactivas.
+- **[TypeScript](https://www.typescriptlang.org/):** Superset de JavaScript que añade tipado estático opcional para mejorar la robustez del código.
+- **[Tailwind CSS](https://tailwindcss.com/):** Framework de CSS utility-first para un diseño rápido y personalizable.
+- **[React Hook Form](https://react-hook-form.com/):** Biblioteca para la gestión eficiente y flexible de formularios en React.
+- **[Zod](https://zod.dev/):** Biblioteca para la declaración y validación de esquemas de datos.
+- **[IndexedDB (idb)](https://github.com/jakearchibald/idb):** API de base de datos del navegador para almacenamiento local, utilizada a través de la librería `idb`.
+- **[JSON Server](https://github.com/typicode/json-server):** Herramienta para crear rápidamente una API RESTful falsa basada en un archivo JSON.
+- **[ESLint](https://eslint.org/):** Herramienta de análisis de código para identificar y corregir problemas en el código JavaScript y TypeScript.
+
+## Instrucciones para Ejecutar el Proyecto
+
+### Requisitos Previos
+
+- Node.js (versión 18 o superior)
+- npm o yarn instalado
+
+### Clonación del Proyecto
+
+```bash
+git clone [https://github.com/kevinalarcon95/prueba-InnerConsulting.git]
+cd prueba-inner-consulting
+```
+
+### Instalación de Dependencias
+
+```bash
+npm install
+```
+
+o
+
+```bash
+yarn install
+```
+
+### Ejecutar el Backend Simulado
+
+Se utiliza `json-server` para simular el backend.
+
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+Esto levantará el backend simulado en `http://localhost:3001`.
+
+### Ejecutar el Proyecto Frontend
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+o
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Esto levantará el proyecto en modo desarrollo en `http://localhost:3000`.
 
-## Learn More
+### Deploys
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend:** [https://prueba-inner-consulting.vercel.app/](https://prueba-inner-consulting.vercel.app/)
+- **Backend:** [https://prueba-innerconsulting-backend.onrender.com/](https://prueba-innerconsulting-backend.onrender.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Decisiones Técnicas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js:** Seleccionado para aprovechar su sistema de rutas basado en archivos, optimizaciones automáticas y soporte para renderizado híbrido.
+- **Tailwind CSS:** Adoptado para acelerar el diseño de interfaces responsivas de manera consistente y eficiente.
+- **Context API + IndexedDB:** Se optó por esta combinación para gestionar el estado de inscripciones y garantizar persistencia local cuando no haya conectividad de red.
+- **React Hook Form + Zod:** Elegidos para la construcción y validación de formularios de manera eficiente, asegurando reglas claras y mensajes de error detallados.
+- **Arquitectura limpia:** Se organizó el proyecto en carpetas por responsabilidad (components, services, hooks, app router, context) para facilitar el mantenimiento y la escalabilidad.
 
-## Deploy on Vercel
+## Mejoras Potenciales
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Si se contara con más tiempo, se implementarían las siguientes mejoras:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Implementar pruebas unitarias y de integración para formularios y servicios críticos.
+- Mejorar la accesibilidad en todos los componentes de la aplicación.
+- Internacionalizar la aplicación para soportar múltiples idiomas.
