@@ -1,21 +1,32 @@
 "use client";
 import InscriptionForm from "@/components/forms/inscription-form";
+import Image from "next/image";
+import backgroundImg from "@/assets/background.webp";
 
 /**
- * 
+ *
  * @returns {JSX.Element}
  * @description Esta es la página de inscripción que contiene el formulario de inscripción.
  */
 const InscriptionPage = () => {
   return (
-    <div className="grid grid-cols-12 gap-4 mx-50">
-      <div className="col-span-4 flex items-center justify-center">
-        <h1 className="text-3xl font-bold">Hola Mundo</h1>
+    <div className="flex gap-10 mx-8 lg:mx-40 lg:items-stretch"> {/* Añadido lg:items-stretch */}
+      {/* Imagen escritorio con overlay */}
+      <div className="hidden lg:flex lg:items-center lg:justify-center relative lg:mt-10 w-[600px]"> 
+        <div className="relative h-full w-full">
+          <Image
+            src={backgroundImg}
+            alt="Imagen de fondo"
+            className="rounded-lg shadow-lg opacity-90 h-full w-full object-cover"
+            width={600}
+            priority
+          />
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-amber-800/10 to-amber-800/20"></div>
+        </div>
       </div>
 
-      <div className="col-span-8 rounded-lg mt-10 p-10 shadow-md bg-white">
-        <InscriptionForm />
-      </div>
+      {/* Formulario de inscripción */}
+      <InscriptionForm />
     </div>
   );
 };
