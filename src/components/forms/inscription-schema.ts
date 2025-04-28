@@ -22,6 +22,7 @@ export const inscriptionSchema = z.object({
   termsAndConditions: z.boolean().refine(val => val === true, {
     message: "Debes aceptar los términos y condiciones",
   }),
+  date: z.string().optional(),
 }).refine((data) => {
   if (data.person && (!data.personName || data.personName.trim() === "")) {
     return false;
