@@ -1,9 +1,9 @@
 import { env } from "@/config/env";
-import { IFormData } from "@/types";
+import { FormDataType } from "@/types";
 
 const API_URL = env.apiBaseUrl;
 
-export const sendInscription = async (data: IFormData) => {
+export const sendInscription = async (data: FormDataType) => {
   try {
     const response = await fetch( `${API_URL}/inscripciones`, {
       method: "POST",
@@ -19,3 +19,19 @@ export const sendInscription = async (data: IFormData) => {
     throw new Error("Error al enviar la inscripción");
   }
 };
+
+export const getInscriptions = async () => {
+  try {
+    const response = await fetch(`${API_URL}/inscripciones`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    return response.json();
+  } catch (error) {
+    console.error("Error al obtener las inscripciones:", error);
+    throw new Error("Error al obtener las inscripciones");
+  }
+}
