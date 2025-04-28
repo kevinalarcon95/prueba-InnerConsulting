@@ -1,14 +1,17 @@
 import React from 'react'
+
 import Header from './header'
+import Footer from './footer'
 
 const UILayout = ( { children } : { children: React.ReactNode } ) => {
   return (
-    <>
-    <div className='bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400/80 min-h-[20vh] flex justify-center items-center'>
+    <div className='flex flex-col min-h-screen'>
       <Header/>
-    </div>
-    { children }
-    </>    
+      <main className="flex-grow lg:mb-10">
+        { children }
+      </main>
+      <Footer/>
+    </div>    
   )
 }
 
