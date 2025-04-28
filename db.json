@@ -65,6 +65,74 @@
         "personName": "",
         "termsAndConditions": true
       }
+    },
+    {
+      "id": "e7de",
+      "data": {
+        "name": "Victor Manuel",
+        "email": "vmmorales@gmail.com",
+        "semester": 10,
+        "person": true,
+        "personName": "tu mamá",
+        "termsAndConditions": true
+      }
+    },
+    {
+      "id": "4088",
+      "data": {
+        "name": "Victor Manuel",
+        "email": "Eliseolaguna662@hotmail.com",
+        "semester": 10,
+        "person": false,
+        "personName": "",
+        "termsAndConditions": true,
+        "date": "2025-04-27T20:28:57.431Z"
+      }
+    },
+    {
+      "id": "10a2",
+      "data": {
+        "name": "Victor Manuel",
+        "email": "Eliseolaguna662@hotmail.com",
+        "semester": 10,
+        "person": false,
+        "personName": "",
+        "termsAndConditions": true,
+        "date": "27/04/2025"
+      }
+    },
+    {
+      "id": "c85d",
+      "data": {
+        "name": "Kevin Fernando Alarcón Camayo2",
+        "email": "kevinalarcon95@gmail.com",
+        "semester": 10,
+        "person": false,
+        "termsAndConditions": true,
+        "date": "27/04/2025"
+      }
+    },
+    {
+      "id": "03fa",
+      "data": {
+        "name": "Kevin Fernando Alarcón Camayo3",
+        "email": "kevinalarcon95@gmail.com",
+        "semester": 10,
+        "person": false,
+        "termsAndConditions": true,
+        "date": "27/04/2025"
+      }
+    },
+    {
+      "id": "1687",
+      "data": {
+        "name": "Kevin Fernando Alarcón Camayo5",
+        "email": "kevinalarcon95@gmail.com",
+        "semester": 1,
+        "person": false,
+        "termsAndConditions": true,
+        "date": "27/04/2025"
+      }
     }
   ]
 }
