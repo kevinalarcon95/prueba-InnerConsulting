@@ -43,12 +43,12 @@ const Header = () => {
             </li>
             <li
               className={`hover:font-bolder hover:text-orange-500 ${
-                pathname === "/"
+                pathname === "/contacto"
                   ? "text-[#FF8000] font-medium  border-b-3"
                   : ""
               }`}
             >
-              <Link href="/">Contacto</Link>
+              <Link href="/contacto">Contacto</Link>
             </li>
           </ul>
         </nav>
